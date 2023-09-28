@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Div.css">
+    <title>16X16 DIVS</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="Title">Sketch Pad</h1>
+        <div class="mode_coloring"></div>
+    <div class="content">
+        <div class="sketch-containers">
+            <div class="sketch-container" id="sketch-container2"></div>
+            <div class="sketch-container" id="sketch-container1"></div>
+            <div class="sketch-container" id="sketch-container3"></div>
+   
+       
+    </div>
+   
+        
+        <div class="buttons">
+    <div class="buttons_left">
+        <button class="BlueButton"  onclick="changeColor('blue')">Blue</button>
+        <button class="OrangeButton"  onclick="changeColor('orange')">Orange</button>
+        <button class="ResetButton" id="ResetButton2" onclick="resetBoard('sketch-container2')">Reset</button>
+    </div>         
+        <button class="GreenButton"  onclick="changeColor('green')">Green</button>
+        <button class="GrayButton" onclick="changeColor('gray')">Gray</button>
+        <button class="BlackButton" onclick="changeColor('black')">Black</button>
+        <button class="RandomButton" onclick="changeColor('random')"> RandomColors</button>
+        <button class="WhiteButton" onclick="changeColor('white')">Erasor</button>
+       <div class="Reset_main">
+        <button class="ResetButton" id="ResetButton1" onclick="resetBoard('sketch-container1')"> Reset</button>
+         <button class="ResetAll" onclick="resetAll()"> ResetAll</button>  
+        </div>
+        <div class="buttons_right">
+         <button class="ResetButton" id="ResetButton3" onclick="resetBoard('sketch-container3')">Reset</button>
+         <button class="YellowButton"  onclick="changeColor('yellow')">Yellow</button>
+         <button class="RedButton"  onclick="changeColor('red')">Red</button>
+        </div>    
+        </div>    
+   
+
+    <div class="Size">
+        <input type="text"  onchange="changeSizeBoard(this.value)" value="16"  placeholder="Size of each Board">
+        <!-- <input type="text"  onchange="changeSizeBoard(this.value)"  value="1"  placeholder="Select Board">
+        <button>Submit</button> -->
+        <button class="NumberOfBoard2" id="NumberOfBoard" onclick="SelectBoard('sketch-container2')">1</button>
+        <button class="NumberOfBoard1" id="NumberOfBoard" onclick="SelectBoard('sketch-container1')">2</button>
+        <button class="NumberOfBoard3" id="NumberOfBoard" onclick="SelectBoard('sketch-container3')">3</button>    
+    </div>
+    <div class="Texts">
+    <h4 class="TextBoard2"></h4>
+    <h4 class="TextBoard1"></h4>
+    <h4 class="TextBoard3"></h4>
+     </div>
+   
+    <h3 class="error">The size can take numbers: 2-100</h3>
+</div> 
+</div>
+
+<script src="./Div.js"></script>
+
+</body>
+</html>
